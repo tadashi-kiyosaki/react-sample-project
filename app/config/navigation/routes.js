@@ -1,0 +1,511 @@
+import _ from 'lodash';
+import { FontIcons } from '../../assets/icons';
+import * as Screens from '../../screens/index';
+
+export const MainRoutes = [
+  {
+    id: 'LoginMenu',
+    title: 'Auth',
+    icon: FontIcons.login,
+    screen: Screens.LoginMenu,
+    children: [
+      {
+        id: 'Login1',
+        title: 'Login V1',
+        screen: Screens.LoginV1,
+        children: [],
+      },
+      {
+        id: 'Register',
+        title: 'Register',
+        screen: Screens.Register,
+        children: [],
+      },
+      // {
+      //   id: 'Login2',
+      //   title: 'Login V2',
+      //   screen: Screens.LoginV2,
+      //   children: [],
+      // },
+      {
+        id: 'SignUp',
+        title: 'Sign Up',
+        screen: Screens.SignUp,
+        children: [],
+      },
+      {
+        id: 'password',
+        title: 'Password Recovery',
+        screen: Screens.PasswordRecovery,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'SocialMenu',
+    title: 'Social',
+    icon: FontIcons.profile,
+    screen: Screens.SocialMenu,
+    children: [
+      {
+        id: 'ProfileV1',
+        title: 'User Profile V1',
+        screen: Screens.ProfileV1,
+        children: [],
+      },
+      {
+        id: 'ProfileV2',
+        title: 'User Profile V2',
+        screen: Screens.ProfileV2,
+        children: [],
+      },
+      {
+        id: 'ProfileV3',
+        title: 'User Profile V3',
+        screen: Screens.ProfileV3,
+        children: [],
+      },
+      {
+        id: 'ProfileSettings',
+        title: 'Profile Settings',
+        screen: Screens.ProfileSettings,
+        children: [],
+      },
+      {
+        id: 'Notifications',
+        title: 'Notifications',
+        screen: Screens.Notifications,
+        children: [],
+      },
+      {
+        id: 'Contacts',
+        title: 'Contacts',
+        screen: Screens.Contacts,
+        children: [],
+      },
+      {
+        id: 'Feed',
+        title: 'Feed',
+        screen: Screens.Feed,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'ArticlesMenu',
+    title: 'Articles',
+    icon: FontIcons.article,
+    screen: Screens.ArticleMenu,
+    children: [
+      {
+        id: 'Articles1',
+        title: 'Article List V1',
+        screen: Screens.Articles1,
+        children: [],
+      },
+      {
+        id: 'Articles2',
+        title: 'Article List V2',
+        screen: Screens.Articles2,
+        children: [],
+      },
+      {
+        id: 'Articles3',
+        title: 'Article List V3',
+        screen: Screens.Articles3,
+        children: [],
+      },
+      {
+        id: 'Articles4',
+        title: 'Article List V4',
+        screen: Screens.Articles4,
+        children: [],
+      },
+      {
+        id: 'Blogposts',
+        title: 'Blogposts',
+        screen: Screens.Blogposts,
+        children: [],
+      },
+      {
+        id: 'Article',
+        title: 'Article View',
+        screen: Screens.Article,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'MessagingMenu',
+    title: 'Messaging',
+    icon: FontIcons.mail,
+    screen: Screens.MessagingMenu,
+    children: [
+      {
+        id: 'Chat',
+        title: 'Chat',
+        screen: Screens.Chat,
+        children: [],
+      },
+      {
+        id: 'ChatList',
+        title: 'Chat List',
+        screen: Screens.ChatList,
+        children: [],
+      },
+      {
+        id: 'Comments',
+        title: 'Comments',
+        screen: Screens.Comments,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'DashboardsMenu',
+    title: 'Dashboards',
+    icon: FontIcons.dashboard,
+    screen: Screens.DashboardMenu,
+    children: [{
+      id: 'Dashboard',
+      title: 'Dashboard',
+      screen: Screens.Dashboard,
+      children: [],
+    },
+    {
+      id: 'MainHome',
+      title: 'MainHome',
+      screen: Screens.MainHome,
+      children: [],
+    },
+    {
+      id: 'Channels',
+      title: 'Channels',
+      screen: Screens.Channels,
+      children: [],
+    },
+    {
+      id: 'Notification',
+      title: 'Notification',
+      screen: Screens.Notification,
+      children: [],
+    },
+    {
+      id: 'Profile',
+      title: 'Profile',
+      screen: Screens.Profile,
+      children: [],
+    },
+    {
+      id: 'Explore',
+      title: 'Explore',
+      screen: Screens.Explore,
+      children: [],
+    },
+    {
+      id: 'Engagements',
+      title: 'Engagements',
+      screen: Screens.Engagements,
+      children: [],
+    }, 
+    {
+      id: 'Reissues',
+      title: 'Reissues',
+      screen: Screens.Reissues,
+      children: [],
+    }, 
+    {
+      id: 'Media',
+      title: 'Media',
+      screen: Screens.Media,
+      children: [],
+    }, 
+    {
+      id: 'Readers',
+      title: 'Readers',
+      screen: Screens.Readers,
+      children: [],
+    },
+    {
+      id: 'Reading',
+      title: 'Reading',
+      screen: Screens.Reading,
+      children: [],
+    },
+    {
+      id: 'Categories',
+      title: 'Categories',
+      screen: Screens.Categories,
+      children: [],
+      },
+      {
+        id: 'Category',
+        title: 'Category',
+        screen: Screens.Category,
+        children: [],
+      },
+      {
+        id: 'NewPing1',
+        title: 'NewPing1',
+        screen: Screens.NewPing1,
+        children: [],
+      },
+      {
+        id: 'NewPing2',
+        title: 'NewPing2',
+        screen: Screens.NewPing2,
+        children: [],
+      },
+      {
+        id: 'NewPing3',
+        title: 'NewPing3',
+        screen: Screens.NewPing3,
+        children: [],
+      },
+      {
+        id: 'MyMoney',
+        title: 'MyMoney',
+        screen: Screens.MyMoney,
+        children: [],
+      },
+      {
+        id: 'DepositFunds',
+        title: 'DepositFunds',
+        screen: Screens.DepositFunds,
+        children: [],
+      },
+      {
+        id: 'WithdrawFunds',
+        title: 'WithdrawFunds',
+        screen: Screens.WithdrawFunds,
+        children: [],
+      },
+      {
+        id: 'DonateFunds',
+        title: 'DonateFunds',
+        screen: Screens.DonateFunds,
+        children: [],
+      },
+      {
+        id: 'DonationsSent',
+        title: 'DonationsSent',
+        screen: Screens.DonationsSent,
+        children: [],
+      },
+      {
+        id: 'DonationsReceived',
+        title: 'DonationsReceived',
+        screen: Screens.DonationsReceived,
+        children: [],
+      },
+      {
+        id: 'WithdrawsCompleted',
+        title: 'WithdrawsCompleted',
+        screen: Screens.WithdrawsCompleted,
+        children: [],
+      },
+      {
+        id: 'DepositsCompleted',
+        title: 'DepositsCompleted',
+        screen: Screens.DepositsCompleted,
+        children: [],
+      },
+      {
+        id: 'Contactus',
+        title: 'Contactus',
+        screen: Screens.Contactus,
+        children: [],
+      },
+      {
+        id: 'NewsDetail',
+        title: 'NewsDetail',
+        screen: Screens.NewsDetail,
+        children: [],
+      },
+      {
+        id: 'MyAds',
+        title: 'MyAds',
+        screen: Screens.MyAds,
+        children: [],
+      },
+      {
+        id: 'BuyNewAd1',
+        title: 'BuyNewAd1',
+        screen: Screens.BuyNewAd1,
+        children: [],
+      },
+      {
+        id: 'BuyNewAd2',
+        title: 'BuyNewAd2',
+        screen: Screens.BuyNewAd2,
+        children: [],
+      },
+      {
+        id: 'BuyNewAd3',
+        title: 'BuyNewAd3',
+        screen: Screens.BuyNewAd3,
+        children: [],
+      },
+      {
+        id: 'StopAds',
+        title: 'StopAds',
+        screen: Screens.StopAds,
+        children: [],
+      },
+      {
+        id: 'ViewAds',
+        title: 'ViewAds',
+        screen: Screens.ViewAds,
+        children: [],
+      },
+      {
+        id: 'EditProfile',
+        title: 'EditProfile',
+        screen: Screens.EditProfile,
+        children: [],
+      },
+      {
+        id: 'NewMemo',
+        title: 'NewMemo',
+        screen: Screens.NewMemo,
+        children: [],
+      },
+      {
+        id: 'NewPoll',
+        title: 'NewPoll',
+        screen: Screens.NewPoll,
+        children: [],
+      },
+      {
+        id: 'NewMap',
+        title: 'NewMap',
+        screen: Screens.NewMap,
+        children: [],
+      },
+      {
+        id: 'NewShare',
+        title: 'NewShare',
+        screen: Screens.NewShare,
+        children: [],
+      }
+    ],
+    
+  },
+  {
+    id: 'WalkthroughMenu',
+    title: 'Walkthroughs',
+    icon: FontIcons.mobile,
+    screen: Screens.WalkthroughMenu,
+    children: [{
+      id: 'Walkthrough',
+      title: 'Walkthrough',
+      screen: Screens.WalkthroughScreen,
+      children: [],
+    }],
+  },
+  {
+    id: 'EcommerceMenu',
+    title: 'Ecommerce',
+    icon: FontIcons.card,
+    screen: Screens.EcommerceMenu,
+    children: [
+      {
+        id: 'Cards',
+        title: 'Cards',
+        icon: FontIcons.card,
+        screen: Screens.Cards,
+        children: [],
+      },
+      {
+        id: 'AddToCardForm',
+        title: 'Add Card Form',
+        icon: FontIcons.addToCardForm,
+        screen: Screens.AddToCardForm,
+        children: [],
+      },
+
+    ],
+  },
+  {
+    id: 'NavigationMenu',
+    icon: FontIcons.navigation,
+    title: 'Navigation',
+    screen: Screens.NavigationMenu,
+    children: [
+      {
+        id: 'GridV1',
+        title: 'Grid Menu V1',
+        screen: Screens.GridV1,
+        children: [],
+      },
+      {
+        id: 'GridV2',
+        title: 'Grid Menu V2',
+        screen: Screens.GridV2,
+        children: [],
+      },
+      {
+        id: 'List',
+        title: 'List Menu',
+        screen: Screens.ListMenu,
+        children: [],
+      },
+      {
+        id: 'Side',
+        title: 'Side Menu',
+        action: 'DrawerOpen',
+        screen: Screens.SideMenu,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'OtherMenu',
+    title: 'Other',
+    icon: FontIcons.other,
+    screen: Screens.OtherMenu,
+    children: [
+      {
+        id: 'Settings',
+        title: 'Settings',
+        screen: Screens.Settings,
+        children: [],
+      },
+      {
+        id: 'AdvancedSetting',
+        title: 'AdvancedSetting',
+        screen: Screens.AdvancedSetting,
+        children: [],
+      },
+      {
+        id: 'PrivacySetting',
+        title: 'PrivacySetting',
+        screen: Screens.PrivacySetting,
+        children: [],
+      },
+      {
+        id: 'Home1',
+        title: 'Home',
+        screen: Screens.HomeV1,
+        children: [],
+      },
+    ],
+  },
+  {
+    id: 'Themes',
+    title: 'Themes',
+    icon: FontIcons.theme,
+    screen: Screens.Themes,
+    children: [],
+  },
+];
+
+const menuRoutes = _.cloneDeep(MainRoutes);
+menuRoutes.unshift({
+  id: 'Home1',
+  title: 'Home',
+  screen: Screens.HomeV1,
+  children: [],
+});
+
+export const MenuRoutes = menuRoutes;
